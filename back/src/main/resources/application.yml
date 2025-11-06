@@ -3,15 +3,10 @@ spring:
     name: garden-day-back
   
   datasource:
-    url: jdbc:h2:mem:gardenday
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: 
-  
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/gardenday}
+    username: ${DATABASE_USER:gardenday}
+    password: ${DATABASE_PASSWORD:gardenday}
+    driver-class-name: org.postgresql.Driver
   
   jpa:
     hibernate:
@@ -20,7 +15,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
   port: 8080

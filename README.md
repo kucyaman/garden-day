@@ -22,8 +22,7 @@ garden-day/
 - Spring Boot 3.2.0
 - Java 21
 - Spring Data JPA
-- H2 Database (開発用)
-- PostgreSQL (本番用)
+- PostgreSQL (開発・本番環境)
 
 ## セットアップ
 
@@ -36,6 +35,17 @@ npm start
 ```
 
 ### バックエンド
+
+**1. データベースの起動**
+
+Docker Composeを使用してPostgreSQLを起動します：
+
+```bash
+cd ../garden-day-cnt
+docker-compose up -d
+```
+
+**2. アプリケーションの起動**
 
 **Maven Wrapperを使用（推奨）**
 このプロジェクトにはMaven Wrapperが含まれているため、Mavenをインストールする必要はありません。
@@ -56,6 +66,8 @@ cd back
 mvn clean install
 mvn spring-boot:run
 ```
+
+> **注意**: バックエンドを起動する前に、PostgreSQLコンテナが起動していることを確認してください。
 
 ## 開発
 
@@ -87,6 +99,15 @@ mvn spring-boot:run
 - 初回実行時は、必要なMavenが自動的にダウンロードされます
 
 ## ポート情報
+
+### データベース (PostgreSQL)
+- **ポート**: `5432`
+- **データベース名**: `gardenday`
+- **ユーザー名**: `gardenday`
+- **パスワード**: `gardenday`
+- 接続URL: `jdbc:postgresql://localhost:5432/gardenday`
+
+> **注意**: これらの値は `garden-day-cnt/.env` ファイルで変更できます。
 
 ### バックエンド
 - **ポート**: `8080`
