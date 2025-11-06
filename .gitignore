@@ -1,0 +1,64 @@
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.iml
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# React Native - プロジェクト生成時に作成されるフォルダ
+# ios/ と android/ フォルダはプロジェクトファイルとして含めるが、
+# ビルド成果物は各フォルダの.gitignoreで除外される
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build outputs
+*.class
+# JAR files (keep wrapper jar, but exclude build artifacts)
+# *.jar  # コメントアウト（Maven Wrapper jarは含める必要があるため）
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# React Native - 追加の除外項目
+# package-lock.json は含める（依存関係のバージョン固定のため）
+# ios/ と android/ フォルダは将来作成される可能性があるが、プロジェクトファイルとして含める
+
