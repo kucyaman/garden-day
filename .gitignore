@@ -62,3 +62,5 @@ temp/
 # package-lock.json は含める（依存関係のバージョン固定のため）
 # ios/ と android/ フォルダは将来作成される可能性があるが、プロジェクトファイルとして含める
 
+# Cursor
+.cursorrules
